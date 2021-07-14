@@ -27,7 +27,7 @@ def titleize(str)
 
   if (words.length == 1)
     ret_str = words[0]
-    ret_str[0] = ret_str[0].upcase #War and peace  # The bridge and Ocean
+    ret_str[0] = ret_str[0].upcase 
     ret_str
   else
     for i in 0..words.length - 1
