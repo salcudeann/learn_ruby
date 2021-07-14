@@ -1,42 +1,25 @@
 def add(x, y)
-  x+y
+  x + y
 end
 
 def subtract(x, y)
-  x-y
+  x - y
 end
 
-def sum(a = Array)
-  sumVal = 0;
-  for i in 0..a.size-1
-    sumVal += a[i]
-  end
+def sum(a)
+  sum_val = a.inject(0, :+)
 
-  sumVal
+  sum_val
 end
 
-def multiply(a = Array)
-  prodVal = 1;
+def multiply(a)
+  prod_val = a.inject(1, :*)
 
-  if a.size == 1
-    prodVal = a[0]*a[1]
-  else
-    for i in 0..a.size-1
-      prodVal = prodVal*a[i]
-    end
-  end
-
-  prodVal
+  prod_val
 end
 
-def power(a,b)
-  # a^b
-  nr = 1;
-  while b > 0
-    nr *= a
-    b = b-1
-  end
-
+def power(a, b)
+  nr = a ** b
   nr
 end
 
@@ -44,8 +27,8 @@ def factorial(x)
   val = 1;
 
   for i in 1..x
-    val *=i;
+    val *= i
   end
 
-  val;
+  val
 end
