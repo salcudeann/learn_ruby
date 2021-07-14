@@ -26,6 +26,9 @@ def translate_con(word)
   new_word = ''
   i = 0
   while $con.include? word[i]
+    if (word[i]=='q') && word[i+1]=='u'
+      i = i+1
+    end
     i += 1
   end
   new_word = new_word + word[i, word.length - 1] + word[0, i ] + 'ay'
