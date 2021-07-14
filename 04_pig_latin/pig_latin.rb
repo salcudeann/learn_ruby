@@ -2,7 +2,7 @@ $vow = ['a', 'e', 'i', 'o', 'u']
 $con = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'w', 'v', 'x', 'y', 'z']
 
 def translate(str)
-  str.split.map { |curr_word|  translate_word(curr_word) }.join
+  str.split.map { |curr_word|  translate_word(curr_word) }.join(' ')
 end
 
 def translate_word(word)
