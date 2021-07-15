@@ -14,8 +14,6 @@ def translate_word(word)
   else
     final_word = +translate_con(word)
   end
-
-  final_word
 end
 
 def translate_vow(word)
@@ -32,6 +30,4 @@ def translate_con(word)
     i += 1
   end
   new_word = new_word + word[i, word.length - 1] + word[0, i ] + 'ay'
-
-  new_word
 end
