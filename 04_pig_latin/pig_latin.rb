@@ -8,7 +8,7 @@ def translate_word(word)
   word[0] = word[0].downcase
 
   if word[0].start_with?(*vowels)
-     word + 'ay'
+    word + 'ay'
   else
     i = 0
     while con.include? word[i]
