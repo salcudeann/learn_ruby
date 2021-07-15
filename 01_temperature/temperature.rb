@@ -3,9 +3,5 @@ def ftoc(val)
 end
 
 def ctof(val)
-  if val == 0
-    32
-  else
-    9.0 * (val-32) / 5.0 + 32
-  end
+  9.0 * (val - 32) / 5.0 + 32
 end
