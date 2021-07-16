@@ -3,21 +3,20 @@ def translate(str)
 end
 
 def translate_word(word)
-  vowels = ['a', 'e', 'i', 'o', 'u']
-  con = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'w', 'v', 'x', 'y', 'z']
+  cons = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'w', 'v', 'x', 'y', 'z']
   word[0] = word[0].downcase
 
-  if word[0].start_with?(*vowels)
-    word + 'ay'
-  else
+  if (word[0].start_with?(*cons))
     i = 0
-    while con.include? word[i]
+    while cons.include? word[i]
       if (word[i] == 'q') && word[i + 1] == 'u'
         i = i + 1
       end
       i += 1
     end
-    word[i, word.length - 1] + word[0, i] + 'ay'
+    word = word[i, word.length - 1] + word[0, i]
   end
+
+  word + 'ay'
 end
 
