@@ -44,7 +44,7 @@ class Dictionary
   def printable
     str = ""
     @hash.reverse_each.each do |key, value|
-      str = str + "[" + key + "]" + " " + "\"" + value + "\"\n"
+      str = "#{str}[#{key}] " + "\"#{value}\"\n"
     end
     str = str[0, str.length - 1]
   end
