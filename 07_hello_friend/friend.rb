@@ -1,5 +1,5 @@
 class Friend
-  def greeting(who = nil)
-    who == nil ? "Hello!" : "Hello, " + who + '!'
+  def greeting(friend = nil)
+    friend == nil ? "Hello!" : "Hello, " + friend + '!'
   end
 end
