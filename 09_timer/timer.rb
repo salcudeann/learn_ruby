@@ -22,7 +22,7 @@ class Timer
   end
 
   def padded(sec)
-    sec < 10 ? "0#{sec.to_s}" : sec.to_s
+    sec.to_s.rjust(2, '0')
   end
 
 end
