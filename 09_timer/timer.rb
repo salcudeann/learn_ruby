@@ -11,17 +11,17 @@ class Timer
     when 0
       @time_string = '00:00:00'
     when 0..59
-      @time_string = '00:00:' + padded(@seconds)
+      @time_string = '00:00:' + left_pad(@seconds)
     when 60..3599
-      @time_string = '00:' + padded(@seconds / 60) + ':' + padded(@seconds % 60)
+      @time_string = '00:' + left_pad(@seconds / 60) + ':' + left_pad(@seconds % 60)
     else
-      @time_string = padded(@seconds / 3600) + ':' + padded((@seconds - 3600 * (@seconds / 3600)) / 60) + ':' + padded((@seconds - 3600 * ((@seconds / 3600))) % 60)
+      @time_string = left_pad(@seconds / 3600) + ':' + left_pad((@seconds - 3600 * (@seconds / 3600)) / 60) + ':' + left_pad((@seconds - 3600 * ((@seconds / 3600))) % 60)
     end
 
     @time_string
   end
 
-  def padded(sec)
+  def left_pad(sec)
     sec.to_s.rjust(2, '0')
   end
 
