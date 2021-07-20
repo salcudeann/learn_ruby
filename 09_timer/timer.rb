@@ -1,6 +1,5 @@
 class Timer
   attr_writer :seconds
-  attr_writer :time_string
 
   def seconds
     @seconds = 0
