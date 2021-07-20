@@ -15,7 +15,7 @@ class Timer
     when 60..3599
       @time_string = '00:' + left_pad(@seconds / 60) + ':' + left_pad(@seconds % 60)
     else
-      @time_string = left_pad(@seconds / 3600) + ':' + left_pad((@seconds - 3600 * (@seconds / 3600)) / 60) + ':' + left_pad((@seconds - 3600 * ((@seconds / 3600))) % 60)
+      @time_string = left_pad(hours) + ':' + left_pad(minutes) + ':' + left_pad(secs)
     end
 
     @time_string
@@ -23,6 +23,18 @@ class Timer
 
   def left_pad(sec)
     sec.to_s.rjust(2, '0')
+  end
+
+  def hours
+    @seconds/3600
+  end
+
+  def minutes
+    (@seconds - 3600 * (@seconds / 3600)) / 60
+  end
+
+  def secs
+    (@seconds - 3600 * ((@seconds / 3600))) % 60
   end
 
 end
