@@ -15,7 +15,7 @@ class Dictionary
 
   def keywords
     key_array = []
-    @hash.each { |k, v| key_array.push(k) }
+    @hash.each_key { |key| key_array.push(key) }
     key_array.sort
   end
 
