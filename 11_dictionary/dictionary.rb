@@ -13,7 +13,7 @@ class Dictionary
     key.is_a?(String) ? @hash[key] = nil : @hash.merge!(key)
   end
 
-  def keywords()
+  def keywords
     key_array = []
     @hash.each { |k, v| key_array.push(k) }
     key_array.sort
