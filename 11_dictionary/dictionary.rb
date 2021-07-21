@@ -10,13 +10,7 @@ class Dictionary
   end
 
   def add(key)
-    if key.is_a? String
-      @hash[key] = nil
-    else
-      key.each do |k, v|
-        @hash[k] = v
-      end
-    end
+    key.is_a?(String) ? @hash[key] = nil : @hash.merge!(key)
   end
 
   def keywords()
