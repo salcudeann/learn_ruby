@@ -20,7 +20,7 @@ class Dictionary
   end
 
   def include?(key)
-    @hash.has_key?(key) ? true : false
+    @hash.has_key?(key)
   end
 
   def find(str)
